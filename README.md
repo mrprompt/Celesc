@@ -10,7 +10,7 @@ Biblioteca de integração com a Celesc por meio de troca de arquivos.
 
 ## Dependências
 
-- php 5.6+
+- php 7.1+
 
 ## Instalação
 
