@@ -2,9 +2,10 @@ Celesc
 ======
 
 [![Build Status](https://travis-ci.org/mrprompt/Celesc.svg?branch=master)](https://travis-ci.org/mrprompt/Celesc)
-[![Code Climate](https://codeclimate.com/github/mrprompt/Celesc/badges/gpa.svg)](https://codeclimate.com/github/mrprompt/Celesc)
-[![Test Coverage](https://codeclimate.com/github/mrprompt/Celesc/badges/coverage.svg)](https://codeclimate.com/github/mrprompt/Celesc/coverage)
-[![Issue Count](https://codeclimate.com/github/mrprompt/Celesc/badges/issue_count.svg)](https://codeclimate.com/github/mrprompt/Celesc)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mrprompt/Celesc/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mrprompt/Celesc/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/mrprompt/Celesc/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mrprompt/Celesc/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/mrprompt/Celesc/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mrprompt/Celesc/build-status/master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/mrprompt/Celesc/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 
 Biblioteca de integração com a Celesc por meio de troca de arquivos.
 
