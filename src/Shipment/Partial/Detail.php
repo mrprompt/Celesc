@@ -1,21 +1,21 @@
 <?php
 namespace MrPrompt\Celesc\Shipment\Partial;
 
-use MrPrompt\Celesc\Common\Base\Authorization;
-use MrPrompt\Celesc\Common\Base\ConsumerUnity;
-use MrPrompt\Celesc\Common\Base\Parcels;
-use MrPrompt\Celesc\Common\Base\Purchaser;
-use MrPrompt\Celesc\Common\Base\Seller;
-use MrPrompt\Celesc\Common\Base\Sequence;
-use MrPrompt\Celesc\Common\Type\Alphanumeric;
-use MrPrompt\Celesc\Common\Type\Number;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
+use MrPrompt\ShipmentCommon\Base\Parcels;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\Seller;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Type\Alphanumeric;
+use MrPrompt\ShipmentCommon\Type\Numeric;
 
 /**
  * File detail
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class Detail
+class Detail extends \stdClass
 {
     /**
      * Type of register
@@ -213,10 +213,10 @@ class Detail
         $result  = str_pad(self::TYPE, 1, Alphanumeric::FILL, Alphanumeric::ALIGN);
 
         // Consumer Unity from client
-        $result .= str_pad($this->consumerUnity->getNumber(), 13, Number::FILL, Number::ALIGN);
+        $result .= str_pad($this->consumerUnity->getNumber(), 13, Numeric::FILL, Numeric::ALIGN);
 
         // Value
-        $result .= str_pad(preg_replace('/[^0-9]+/', '', $this->getPrice()->getPrice()), 9, Number::FILL, Number::ALIGN);
+        $result .= str_pad(preg_replace('/[^0-9]+/', '', $this->getPrice()->getPrice()), 9, Numeric::FILL, Numeric::ALIGN);
 
         // Maturity
         $result .= $this->getPrice()->getMaturity()->format(self::DATE_FORMAT);
@@ -246,7 +246,7 @@ class Detail
         $result .= str_pad(' ', 11, Alphanumeric::FILL, Alphanumeric::ALIGN);
 
         // sequence number from line
-        $result .= str_pad($this->sequence->getValue(), 6, Number::FILL, Number::ALIGN);
+        $result .= str_pad($this->sequence->getValue(), 6, Numeric::FILL, Numeric::ALIGN);
 
         // resulting....
         return $result;

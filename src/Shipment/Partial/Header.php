@@ -2,11 +2,11 @@
 namespace MrPrompt\Celesc\Shipment\Partial;
 
 use DateTime;
-use MrPrompt\Celesc\Common\Base\Dealership;
-use MrPrompt\Celesc\Common\Base\Customer;
-use MrPrompt\Celesc\Common\Base\Sequence;
-use MrPrompt\Celesc\Common\Type\Number;
-use MrPrompt\Celesc\Common\Type\Alphanumeric;
+use MrPrompt\ShipmentCommon\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Type\Numeric;
+use MrPrompt\ShipmentCommon\Type\Alphanumeric;
 
 /**
  * File header
@@ -174,7 +174,7 @@ class Header
         $line .= str_pad(self::CURRENCY, 6, Alphanumeric::FILL, Alphanumeric::ALIGN);
 
         // sequence file
-        $line .= str_pad($this->sequence->getValue(), 6, Number::FILL, Number::ALIGN);
+        $line .= str_pad($this->sequence->getValue(), 6, Numeric::FILL, Numeric::ALIGN);
 
         // Result code
         $line .= str_pad(' ', 2, Alphanumeric::FILL, Alphanumeric::ALIGN);
@@ -189,7 +189,7 @@ class Header
         $line .= self::CODE;
 
         // sequence line
-        $line .= str_pad(self::LINE, 6, Number::FILL, Number::ALIGN);
+        $line .= str_pad(self::LINE, 6, Numeric::FILL, Numeric::ALIGN);
 
         // resulting...
         return $line;

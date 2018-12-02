@@ -5,10 +5,10 @@ use DateTime;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 use MrPrompt\Celesc\Shipment\Partial\Header;
-use MrPrompt\Celesc\Common\Util\ChangeProtectedAttribute;
+use MrPrompt\Celesc\Tests\ChangeProtectedAttribute;
 use MrPrompt\Celesc\Tests\Mock as CelescMock;
-use MrPrompt\Celesc\Common\Base\Customer;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
 /**
  * Header test case.

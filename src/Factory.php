@@ -2,25 +2,25 @@
 namespace MrPrompt\Celesc;
 
 use DateTime;
-use MrPrompt\Celesc\Common\Base\Address;
-use MrPrompt\Celesc\Common\Base\Authorization;
-use MrPrompt\Celesc\Common\Base\Bank;
-use MrPrompt\Celesc\Common\Base\BankAccount;
-use MrPrompt\Celesc\Common\Base\Billet;
-use MrPrompt\Celesc\Common\Base\Charge;
-use MrPrompt\Celesc\Common\Base\ConsumerUnity;
-use MrPrompt\Celesc\Common\Base\Customer;
-use MrPrompt\Celesc\Common\Base\Document;
-use MrPrompt\Celesc\Common\Base\Email;
-use MrPrompt\Celesc\Common\Base\Holder;
-use MrPrompt\Celesc\Common\Base\Occurrence;
-use MrPrompt\Celesc\Common\Base\Parcel;
-use MrPrompt\Celesc\Common\Base\Parcels;
-use MrPrompt\Celesc\Common\Base\Person;
-use MrPrompt\Celesc\Common\Base\Phone;
-use MrPrompt\Celesc\Common\Base\Purchaser;
-use MrPrompt\Celesc\Common\Base\Seller;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Address;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\Bank;
+use MrPrompt\ShipmentCommon\Base\BankAccount;
+use MrPrompt\ShipmentCommon\Base\Billet;
+use MrPrompt\ShipmentCommon\Base\Charge;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Document;
+use MrPrompt\ShipmentCommon\Base\Email;
+use MrPrompt\ShipmentCommon\Base\Holder;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
+use MrPrompt\ShipmentCommon\Base\Parcel;
+use MrPrompt\ShipmentCommon\Base\Parcels;
+use MrPrompt\ShipmentCommon\Base\Person;
+use MrPrompt\ShipmentCommon\Base\Phone;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\Seller;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Celesc\Shipment\Partial\Detail;
 
 /**
@@ -50,7 +50,7 @@ abstract class Factory
     public static function createCustomerFromArray(array $campos = [])
     {
         $customer = new Customer();
-        $customer->setCode($campos['codigo']);
+        $customer->setCode((int) $campos['codigo']);
         $customer->setIdentityNumber($campos['documento']);
         $customer->setName($campos['nome']);
 
@@ -278,7 +278,7 @@ abstract class Factory
 
         if (array_key_exists('vendedor', $campos)) {
             $seller = new Seller();
-            $seller->setCode($campos['vendedor']['codigo']);
+            $seller->setCode((int) $campos['vendedor']['codigo']);
             $seller->setName($campos['vendedor']['nome']);
             $seller->setDocument(static::createDocumentFromArray($campos['vendedor']));
             $seller->setAddress(static::createAddressFromArray($campos['vendedor']['endereco']));

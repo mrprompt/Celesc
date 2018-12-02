@@ -1,14 +1,14 @@
 <?php
 namespace MrPrompt\Celesc\Received\Partial;
 
-use MrPrompt\Celesc\Common\Base\Authorization;
-use MrPrompt\Celesc\Common\Base\ConsumerUnity;
-use MrPrompt\Celesc\Common\Base\Dealership;
-use MrPrompt\Celesc\Common\Base\Document;
-use MrPrompt\Celesc\Common\Base\Occurrence;
-use MrPrompt\Celesc\Common\Base\Parcel;
-use MrPrompt\Celesc\Common\Base\Purchaser;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
+use MrPrompt\ShipmentCommon\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\Document;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
+use MrPrompt\ShipmentCommon\Base\Parcel;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 use DateTime;
 
 /**
@@ -16,7 +16,7 @@ use DateTime;
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-class Detail
+class Detail extends \stdClass
 {
     /**
      * Type of register
@@ -67,7 +67,7 @@ class Detail
     public function __construct($row)
     {
         $this->consumerUnity = new ConsumerUnity();
-        $this->consumerUnity->setNumber(substr($row, 1, 13));
+        $this->consumerUnity->setNumber((int) substr($row, 1, 13));
 
         $this->parcel = new Parcel();
         $this->parcel->setPrice(substr($row, 14, 9));
@@ -75,20 +75,20 @@ class Detail
         $this->parcel->setMaturity(DateTime::createFromFormat('dmY', substr($row, 23, 8)));
 
         $this->occurrence = new Occurrence();
-        $this->occurrence->setReturn(substr($row, 31, 2));
+        $this->occurrence->setReturn((int) substr($row, 31, 2));
 
         $this->authorization = new Authorization();
-        $this->authorization->setNumber(substr($row, 41, 60));
+        $this->authorization->setNumber((int) substr($row, 41, 60));
 
         $this->dealership = new Dealership();
 
         $document = new Document();
-        $document->setNumber(substr($row, 109, 11));
+        $document->setNumber((int) substr($row, 109, 11));
 
         $this->purchaser = new Purchaser();
         $this->purchaser->setDocument($document);
 
-        $this->sequence = new Sequence(substr($row, 144, 6));
+        $this->sequence = new Sequence((int) substr($row, 144, 6));
     }
 
     /**

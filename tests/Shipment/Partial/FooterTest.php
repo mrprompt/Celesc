@@ -4,7 +4,7 @@ namespace MrPrompt\Celesc\Tests\Shipment\Partial;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 use MrPrompt\Celesc\Shipment\Partial\Footer;
-use MrPrompt\Celesc\Common\Util\ChangeProtectedAttribute;
+use MrPrompt\Celesc\Tests\ChangeProtectedAttribute;
 use MrPrompt\Celesc\Tests\Mock as CelescMock;
 
 /**
@@ -48,7 +48,7 @@ class FooterTest extends TestCase
      * @test
      * @covers \MrPrompt\Celesc\Shipment\Partial\Footer::__construct()
      * @covers \MrPrompt\Celesc\Shipment\Partial\Footer::render()
-     * @covers \MrPrompt\Celesc\Common\Base\Sequence::getValue()
+     * @covers \MrPrompt\ShipmentCommon\Base\Sequence::getValue()
      */
     public function renderReturnExactLength()
     {

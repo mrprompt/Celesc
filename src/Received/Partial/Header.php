@@ -2,10 +2,10 @@
 namespace MrPrompt\Celesc\Received\Partial;
 
 use DateTime;
-use MrPrompt\Celesc\Common\Base\Dealership;
-use MrPrompt\Celesc\Common\Base\Occurrence;
-use MrPrompt\Celesc\Common\Base\Customer;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
 /**
  * File header
@@ -77,18 +77,18 @@ class Header
     public function __construct($row)
     {
         $this->customer = new Customer();
-        $this->customer->setCode(substr($row, 1, 56));
+        $this->customer->setCode((int) substr($row, 1, 56));
         $this->customer->setName(substr($row, 83, 60));
 
         $this->dealership = new Dealership();
-        $this->dealership->setCode(substr($row, 57, 2));
+        $this->dealership->setCode((int) substr($row, 57, 2));
 
         $this->created  = DateTime::createFromFormat('dmY', substr($row, 61, 8));
 
         $this->occurrence = new Occurrence();
-        $this->occurrence->setReturn(substr($row, 81, 2));
+        $this->occurrence->setReturn((int) substr($row, 81, 2));
 
-        $this->sequence = new Sequence(substr($row, 144, 6));
+        $this->sequence = new Sequence((int) substr($row, 144, 6));
     }
 
     /**

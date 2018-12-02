@@ -1,8 +1,8 @@
 <?php
 namespace MrPrompt\Celesc\Received\Partial;
 
-use MrPrompt\Celesc\Common\Base\Parcel;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Parcel;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
 /**
  * File footer
@@ -38,7 +38,7 @@ class Footer
         $this->parcel->setPrice(substr($row, 1, 11));
         $this->parcel->setQuantity(1);
 
-        $this->sequence = new Sequence((substr($row, 144, 6)));
+        $this->sequence = new Sequence((int) (substr($row, 144, 6)));
     }
 
     /**
