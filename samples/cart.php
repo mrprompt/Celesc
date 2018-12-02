@@ -4,8 +4,8 @@
  *
  * @author Thiago Paes <mrprompt@gmail.com>
  */
-use MrPrompt\Celesc\Common\Base\Charge;
-use MrPrompt\Celesc\Common\Base\Occurrence;
+use MrPrompt\ShipmentCommon\Base\Charge;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
 
 /* @var $vencimento \DateTime */
 $vencimento = (new DateTime())->add(new DateInterval('P30D'));

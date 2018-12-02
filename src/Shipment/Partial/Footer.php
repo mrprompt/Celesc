@@ -1,9 +1,9 @@
 <?php
 namespace MrPrompt\Celesc\Shipment\Partial;
 
-use MrPrompt\Celesc\Common\Base\Sequence;
-use MrPrompt\Celesc\Common\Type\Alphanumeric;
-use MrPrompt\Celesc\Common\Type\Number;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Type\Alphanumeric;
+use MrPrompt\ShipmentCommon\Type\Numeric;
 
 /**
  * File footer
@@ -63,13 +63,13 @@ class Footer
         $result = self::TYPE;
 
         // sum of charges values
-        $result .= str_pad(str_replace('.',  '', $this->sum), 11, Number::FILL, Number::ALIGN);
+        $result .= str_pad(str_replace('.',  '', $this->sum), 11, Numeric::FILL, Numeric::ALIGN);
 
         // whitespace
         $result .= str_pad(' ', 132, Alphanumeric::FILL, Alphanumeric::ALIGN);
 
         // sequence line
-        $result .= str_pad($this->sequence->getValue(), 6, Number::FILL, Number::ALIGN);
+        $result .= str_pad($this->sequence->getValue(), 6, Numeric::FILL, Numeric::ALIGN);
 
         // resulting...
         return $result;

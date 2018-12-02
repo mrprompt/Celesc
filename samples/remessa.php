@@ -7,17 +7,17 @@
  * @author Thiago Paes <mrprompt@gmail.com>
  */
 use MrPrompt\Celesc\Factory;
-use MrPrompt\Celesc\Common\Base\Cart;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Cart;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Celesc\Shipment\File;
-use MrPrompt\Celesc\Common\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\Dealership;
 
 require __DIR__ . '/bootstrap.php';
 
 /* @var $today \DateTime */
 $today      = DateTime::createFromFormat('dmY', '01082016');
 
-/* @var $cart \MrPrompt\Celesc\Common\Base\Cart */
+/* @var $cart \MrPrompt\ShipmentCommon\Base\Cart */
 $cart       = new Cart();
 
 /* @var $lista array */
@@ -42,13 +42,13 @@ foreach ($lista as $linha) {
 }
 
 try {
-    /* @var $sequence \MrPrompt\Celesc\Common\Base\Sequence */
+    /* @var $sequence \MrPrompt\ShipmentCommon\Base\Sequence */
     $sequence   = new Sequence('0104');
 
-    /* @var $customer \MrPrompt\Celesc\Common\Base\Customer */
+    /* @var $customer \MrPrompt\ShipmentCommon\Base\Customer */
     $customer   = Factory::createCustomerFromArray(array_shift($lista)['vendedor']);
 
-    /* @var $dealership \MrPrompt\Celesc\Common\Base\Dealership */
+    /* @var $dealership \MrPrompt\ShipmentCommon\Base\Dealership */
     $dealership = new Dealership();
     $dealership->setCode('0001');
 

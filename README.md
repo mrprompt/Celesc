@@ -28,11 +28,7 @@ Descrição dos exemplos
     - samples/remessa.php       - Geração de arquivo de remessa
     - samples/recebido.php      - Leitura do arquivo de retorno
 
-## Contribuindo
+## Licença
 
-### Instalação
-Após baixar o [Composer](http://www.getcomposer.org), basta rodar o *install*
-
-```
-composer.phar install --prefer-dist
-```
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007

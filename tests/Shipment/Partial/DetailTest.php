@@ -1,21 +1,21 @@
 <?php
 namespace MrPrompt\Celesc\Tests\Shipment\Partial;
 
-use MrPrompt\Celesc\Common\Base\Bank;
-use MrPrompt\Celesc\Common\Base\Holder;
+use MrPrompt\ShipmentCommon\Base\Bank;
+use MrPrompt\ShipmentCommon\Base\Holder;
 use PHPUnit\Framework\TestCase;
 use MrPrompt\Celesc\Shipment\Partial\Detail;
-use MrPrompt\Celesc\Common\Util\ChangeProtectedAttribute;
+use MrPrompt\Celesc\Tests\ChangeProtectedAttribute;
 use MrPrompt\Celesc\Tests\Mock as CelescMock;
-use MrPrompt\Celesc\Common\Base\Customer;
-use MrPrompt\Celesc\Common\Base\Charge;
-use MrPrompt\Celesc\Common\Base\Seller;
-use MrPrompt\Celesc\Common\Base\Purchaser;
-use MrPrompt\Celesc\Common\Base\Parcels;
-use MrPrompt\Celesc\Common\Base\Authorization;
-use MrPrompt\Celesc\Common\Base\BankAccount;
-use MrPrompt\Celesc\Common\Base\ConsumerUnity;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Charge;
+use MrPrompt\ShipmentCommon\Base\Seller;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\Parcels;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\BankAccount;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
 /**
  * Detail test case.

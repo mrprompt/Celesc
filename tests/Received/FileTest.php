@@ -1,11 +1,11 @@
 <?php
 namespace MrPrompt\Celesc\Tests\Received;
 
-use MrPrompt\Celesc\Common\Base\Cart;
+use MrPrompt\ShipmentCommon\Base\Cart;
 use MrPrompt\Celesc\Received\Partial\Footer;
 use MrPrompt\Celesc\Received\Partial\Header;
 use MrPrompt\Celesc\Received\File;
-use MrPrompt\Celesc\Common\Util\ChangeProtectedAttribute;
+use MrPrompt\Celesc\Tests\ChangeProtectedAttribute;
 use MrPrompt\Celesc\Tests\Mock;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;

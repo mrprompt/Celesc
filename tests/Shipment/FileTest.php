@@ -1,12 +1,12 @@
 <?php
 namespace MrPrompt\Celesc\Tests\Shipment;
 
-use MrPrompt\Celesc\Common\Base\Cart;
+use MrPrompt\ShipmentCommon\Base\Cart;
 use MrPrompt\Celesc\Shipment\File;
-use MrPrompt\Celesc\Common\Util\ChangeProtectedAttribute;
+use MrPrompt\Celesc\Tests\ChangeProtectedAttribute;
 use MrPrompt\Celesc\Shipment\Partial\Footer;
 use MrPrompt\Celesc\Shipment\Partial\Header;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Celesc\Tests\Mock;
 use DateTime;
 use Mockery as m;

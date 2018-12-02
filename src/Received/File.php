@@ -1,8 +1,8 @@
 <?php
 namespace MrPrompt\Celesc\Received;
 
-use MrPrompt\Celesc\Common\Base\Sequence;
-use MrPrompt\Celesc\Common\Base\Cart;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Cart;
 use MrPrompt\Celesc\Received\Partial\Detail;
 use MrPrompt\Celesc\Received\Partial\Footer;
 use MrPrompt\Celesc\Received\Partial\Header;

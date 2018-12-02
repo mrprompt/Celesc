@@ -1,16 +1,16 @@
 <?php
 namespace MrPrompt\Celesc\Shipment;
 
-use MrPrompt\Celesc\Common\Base\Dealership;
-use MrPrompt\Celesc\Common\Base\Authorization;
-use MrPrompt\Celesc\Common\Base\Cart;
-use MrPrompt\Celesc\Common\Base\ConsumerUnity;
-use MrPrompt\Celesc\Common\Base\Customer;
-use MrPrompt\Celesc\Common\Base\Parcel;
-use MrPrompt\Celesc\Common\Base\Parcels;
-use MrPrompt\Celesc\Common\Base\Purchaser;
-use MrPrompt\Celesc\Common\Base\Seller;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\Cart;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
+use MrPrompt\ShipmentCommon\Base\Customer;
+use MrPrompt\ShipmentCommon\Base\Parcel;
+use MrPrompt\ShipmentCommon\Base\Parcels;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\Seller;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 use MrPrompt\Celesc\Shipment\Partial\Detail;
 use MrPrompt\Celesc\Shipment\Partial\Footer;
 use MrPrompt\Celesc\Shipment\Partial\Header;
@@ -92,7 +92,7 @@ class File
         Dealership $dealership,
         Sequence $sequence,
         DateTime $today,
-        $storageDir = null
+        string $storageDir = null
     ) {
         $this->customer     = $customer;
         $this->dealership   = $dealership;

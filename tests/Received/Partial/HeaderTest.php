@@ -4,10 +4,10 @@ namespace MrPrompt\Celesc\Tests\Received\Partial;
 use DateTime;
 use PHPUnit\Framework\TestCase;
 use MrPrompt\Celesc\Received\Partial\Header;
-use MrPrompt\Celesc\Common\Util\ChangeProtectedAttribute;
-use MrPrompt\Celesc\Common\Base\Customer;
+use MrPrompt\Celesc\Tests\ChangeProtectedAttribute;
+use MrPrompt\ShipmentCommon\Base\Customer;
 use MrPrompt\Celesc\Tests\Mock;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
 /**
  * Header test case.

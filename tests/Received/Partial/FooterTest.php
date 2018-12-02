@@ -3,8 +3,8 @@ namespace MrPrompt\Celesc\Tests\Received\Partial;
 
 use PHPUnit\Framework\TestCase;
 use MrPrompt\Celesc\Received\Partial\Footer;
-use MrPrompt\Celesc\Common\Base\Sequence;
-use MrPrompt\Celesc\Common\Util\ChangeProtectedAttribute;
+use MrPrompt\ShipmentCommon\Base\Sequence;
+use MrPrompt\Celesc\Tests\ChangeProtectedAttribute;
 use MrPrompt\Celesc\Tests\Mock;
 
 /**

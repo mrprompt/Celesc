@@ -7,7 +7,7 @@
  * @author Thiago Paes <mrprompt@gmail.com>
  */
 use MrPrompt\Celesc\Received\File;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
 require __DIR__ . '/bootstrap.php';
 
@@ -15,7 +15,7 @@ require __DIR__ . '/bootstrap.php';
 $lista      = require __DIR__ . '/cart.php';
 
 try {
-    /* @var $importer \MrPrompt\Celesc\Common\Base\Sequence */
+    /* @var $importer \MrPrompt\ShipmentCommon\Base\Sequence */
     $sequence   = new Sequence('063');
 
     /* @var $importer \MrPrompt\Celesc\Received\File */

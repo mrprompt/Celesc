@@ -3,16 +3,16 @@ namespace MrPrompt\Celesc\Tests\Received\Partial;
 
 use PHPUnit\Framework\TestCase;
 use MrPrompt\Celesc\Received\Partial\Detail;
-use MrPrompt\Celesc\Common\Util\ChangeProtectedAttribute;
+use MrPrompt\Celesc\Tests\ChangeProtectedAttribute;
 use MrPrompt\Celesc\Tests\Mock;
-use MrPrompt\Celesc\Common\Base\Authorization;
-use MrPrompt\Celesc\Common\Base\Client;
-use MrPrompt\Celesc\Common\Base\ConsumerUnity;
-use MrPrompt\Celesc\Common\Base\Dealership;
-use MrPrompt\Celesc\Common\Base\Occurrence;
-use MrPrompt\Celesc\Common\Base\Parcel;
-use MrPrompt\Celesc\Common\Base\Purchaser;
-use MrPrompt\Celesc\Common\Base\Sequence;
+use MrPrompt\ShipmentCommon\Base\Authorization;
+use MrPrompt\ShipmentCommon\Base\Client;
+use MrPrompt\ShipmentCommon\Base\ConsumerUnity;
+use MrPrompt\ShipmentCommon\Base\Dealership;
+use MrPrompt\ShipmentCommon\Base\Occurrence;
+use MrPrompt\ShipmentCommon\Base\Parcel;
+use MrPrompt\ShipmentCommon\Base\Purchaser;
+use MrPrompt\ShipmentCommon\Base\Sequence;
 
 /**
  * Detail test case.

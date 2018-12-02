@@ -1,5 +1,5 @@
 <?php
-namespace MrPrompt\Celesc\Common\Util;
+namespace MrPrompt\Celesc\Tests;
 
 use ReflectionProperty;
 
